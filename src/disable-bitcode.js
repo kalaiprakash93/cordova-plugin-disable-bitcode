@@ -19,7 +19,7 @@ module.exports = function(context) {
   //We need to use parseSync because async causes problems when other plugins
   //are handling pbxproj file.
   xcodeProj.parseSync();
-  xcodeProj.updateBuildProperty('ENABLE_BITCODE', 'NO');
+  xcodeProj.updateBuildProperty('ENABLE_BITCODE', 'YES');
   fs.writeFileSync(pbxPath, xcodeProj.writeSync());
 };
 
